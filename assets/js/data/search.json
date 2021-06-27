@@ -1,4 +1,19 @@
 [
   
+  {
+    "title": "JavaScript - 함수(Functions) &amp; 매개변수(Parameter)",
+    "url": "/posts/javascript-functions-parameter/",
+    "categories": "Programming, JavaScript",
+    "tags": "JavaScript, Functions, Parameter, Arguments, Signature, Function overloading, 자바스크립트, 함수, 매개변수, 인자, 시그니처, 함수 오버로딩",
+    "date": "2021-06-27 14:10:00 +0900",
+    
+
+
+
+
+
+    "snippet": "👨🏻‍💻 함수의 매개변수⚪️ 매개변수function sum() {  let total = 0;  for(arg in arguments) {    total += arguments[arg];  }  console.log(total);}sum(10, 5); // 15sum(10, &#39; 더하기 &#39;, 5, &#39;는?&#39;); // 10 더하기 5는?sum함수의 매개변수를 선언하지 않았지만 sum함수를 호출할 때 여러 개의 인자를 매개변수로 넘겼다.하지만 인터프리터는 에러로 판단하지 않으며, 프로그램은 정상적으로 동..."
+  }
+  
 ]
 
