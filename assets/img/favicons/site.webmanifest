@@ -1,1 +1,26 @@
-{ "name": "Gunn’s Blog", "short_name": "Gunn’s Blog", "description": "프론트엔드 개발자 김건의 블로그입니다. 개발에 관한 정보를 공유하는 것은 물론, 다양한 주제의 소통창구로 이용할 수 있습니다.", "icons": [ { "src": "/assets/img/favicons/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" }, { "src": "/assets/img/favicons/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }], "start_url": "/index.html", "theme_color": "#2a1e6b", "background_color": "#ffffff", "display": "fullscreen" }
+---
+layout: compress
+---
+
+{% assign favicon_path = "/assets/img/favicons" | relative_url %}
+
+{
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "icons": [
+    {
+      "src": "{{ favicon_path }}/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ favicon_path }}/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "start_url": "{{ '/index.html' | relative_url }}",
+  "theme_color": "#2a1e6b",
+  "background_color": "#ffffff",
+  "display": "fullscreen"
+}

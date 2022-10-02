@@ -1,0 +1,81 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+
+
+/* --- The common styles --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow-wrap: break-word;
+  word-break: keep-all
+}
+
+@media (max-width: 576px) {
+  #page-category ul > li::before,
+  #page-tag ul > li::before {
+      flex-shrink: 0
+  }
+}
+
+/* --- Style for Tab Categories --- */
+
+.categories .card-header {
+  border-bottom: none;
+}
+
+.categories .list-group-item:first-child,
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item {
+  margin-bottom: 0;
+}
+
+.list-group-item + .list-group-item {
+  border-bottom: none;
+}
+
+/* --- sidebar layout --- */
+
+#sidebar .site-title a {
+  font-weight: 700;
+}
+
+/* --- top-bar --- */
+
+#topbar-title {
+  font-family: inherit;
+}
+
+/* -- Emoji in post titles -- */
+#core-wrapper h2 strong::before,
+#core-wrapper h3 strong::before,
+#core-wrapper h4 strong::before {
+  margin-right: 5px
+}
+
+#core-wrapper h2 strong::before  {
+  content: '👨🏻‍💻 ';
+}
+
+#core-wrapper h2[id="각주"] strong::before  {
+  content: '📌 ';
+}
+
+#core-wrapper h3 strong::before {
+  content: '⚪️ ';
+}
+
+#core-wrapper h4 strong::before {
+  content: '👉 ';
+}
